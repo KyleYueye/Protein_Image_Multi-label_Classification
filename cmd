@@ -1,0 +1,1 @@
+nohup /home/jinHM/liziyi/Protein/Torch_Train/run_main.sh > /home/jinHM/liziyi/Protein/Torch_Train/logs/0623_main_2.log 2>&1 &

@@ -1,0 +1,108 @@
+nohup: ignoring input
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    92  100    27  100    65     96    232 --:--:-- --:--:-- --:--:--   233
+{"errcode":0,"errmsg":"ok"}[INFO]: 10 classes found
+[INFO]: 58095 images found
+[INFO]: 10 classes found
+[INFO]: 7262 images found
+-------------------------------------------------------------------------------------
+Epoch: 1/15
+Epoch: 01, Training: loss: 0.29, auc: 74.72%, macro_f1: 12.93%, micro_f1: 23.32%
+		Validation: loss: 0.25, auc: 83.77%, macro_f1: 19.52%, micro_f1: 32.05%, Time: 348.25s
+Best auc for validation : 83.77% at epoch 001
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 2/15
+Epoch: 02, Training: loss: 0.24, auc: 83.49%, macro_f1: 30.02%, micro_f1: 43.63%
+		Validation: loss: 0.23, auc: 86.31%, macro_f1: 32.59%, micro_f1: 48.46%, Time: 348.58s
+Best auc for validation : 86.31% at epoch 002
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 3/15
+Epoch: 03, Training: loss: 0.22, auc: 86.46%, macro_f1: 38.65%, micro_f1: 51.84%
+		Validation: loss: 0.22, auc: 88.60%, macro_f1: 37.29%, micro_f1: 53.68%, Time: 350.05s
+Best auc for validation : 88.60% at epoch 003
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 4/15
+Epoch: 04, Training: loss: 0.21, auc: 87.68%, macro_f1: 43.71%, micro_f1: 56.15%
+		Validation: loss: 0.29, auc: 82.74%, macro_f1: 32.08%, micro_f1: 44.78%, Time: 349.25s
+Best auc for validation : 88.60% at epoch 003
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 5/15
+Epoch: 05, Training: loss: 0.20, auc: 89.44%, macro_f1: 47.47%, micro_f1: 58.88%
+		Validation: loss: 0.24, auc: 87.75%, macro_f1: 40.64%, micro_f1: 51.10%, Time: 349.77s
+Best auc for validation : 88.60% at epoch 003
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 6/15
+Epoch: 06, Training: loss: 0.19, auc: 89.77%, macro_f1: 50.42%, micro_f1: 60.98%
+		Validation: loss: 0.21, auc: 89.92%, macro_f1: 47.37%, micro_f1: 58.15%, Time: 349.53s
+Best auc for validation : 89.92% at epoch 006
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 7/15
+Epoch: 07, Training: loss: 0.19, auc: 90.57%, macro_f1: 53.89%, micro_f1: 63.06%
+		Validation: loss: 0.18, auc: 92.49%, macro_f1: 53.89%, micro_f1: 64.82%, Time: 349.22s
+Best auc for validation : 92.49% at epoch 007
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 8/15
+Epoch: 08, Training: loss: 0.18, auc: 90.42%, macro_f1: 57.78%, micro_f1: 65.36%
+		Validation: loss: 0.20, auc: 91.00%, macro_f1: 48.89%, micro_f1: 61.46%, Time: 348.73s
+Best auc for validation : 92.49% at epoch 007
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 9/15
+Epoch: 09, Training: loss: 0.17, auc: 91.94%, macro_f1: 59.97%, micro_f1: 66.80%
+		Validation: loss: 0.18, auc: 92.27%, macro_f1: 55.03%, micro_f1: 63.99%, Time: 349.96s
+Best auc for validation : 92.49% at epoch 007
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 10/15
+Epoch: 10, Training: loss: 0.17, auc: 92.13%, macro_f1: 61.96%, micro_f1: 68.40%
+		Validation: loss: 0.17, auc: 93.51%, macro_f1: 58.83%, micro_f1: 68.18%, Time: 349.17s
+Best auc for validation : 93.51% at epoch 010
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 11/15
+Epoch: 11, Training: loss: 0.16, auc: 92.94%, macro_f1: 63.50%, micro_f1: 69.67%
+		Validation: loss: 0.20, auc: 91.74%, macro_f1: 57.68%, micro_f1: 62.64%, Time: 349.69s
+Best auc for validation : 93.51% at epoch 010
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 12/15
+Epoch: 12, Training: loss: 0.15, auc: 93.44%, macro_f1: 65.24%, micro_f1: 71.15%
+		Validation: loss: 0.16, auc: 94.17%, macro_f1: 61.91%, micro_f1: 69.62%, Time: 349.55s
+Best auc for validation : 94.17% at epoch 012
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 13/15
+Epoch: 13, Training: loss: 0.15, auc: 93.97%, macro_f1: 67.06%, micro_f1: 72.57%
+		Validation: loss: 0.17, auc: 93.56%, macro_f1: 61.80%, micro_f1: 67.75%, Time: 349.38s
+Best auc for validation : 94.17% at epoch 012
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 14/15
+Epoch: 14, Training: loss: 0.14, auc: 94.64%, macro_f1: 68.79%, micro_f1: 74.03%
+		Validation: loss: 0.17, auc: 93.75%, macro_f1: 62.42%, micro_f1: 69.16%, Time: 349.48s
+Best auc for validation : 94.17% at epoch 012
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+Epoch: 15/15
+Epoch: 15, Training: loss: 0.13, auc: 95.69%, macro_f1: 70.85%, micro_f1: 75.68%
+		Validation: loss: 0.16, auc: 94.34%, macro_f1: 65.12%, micro_f1: 70.26%, Time: 349.44s
+Best auc for validation : 94.34% at epoch 015
+[INFO]: serializing model...
+-------------------------------------------------------------------------------------
+[INFO]: saving history...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    93  100    27  100    66     71    175 --:--:-- --:--:-- --:--:--   175
+{"errcode":0,"errmsg":"ok"}

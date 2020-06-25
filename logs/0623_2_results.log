@@ -1,0 +1,11 @@
+[INFO] loading network...
+3.2s in loading network
+[INFO] reading and predicting images...
+100%|███████████████████████████████████████| 7262/7262 [01:30<00:00, 80.17it/s]
+90.6s in loading images
+[INFO] computing metrics...
+macro_f1 = 69.23%
+micro_f1 = 72.21%
+roc_auc = 94.23%
+
+Process finished with exit code 0
