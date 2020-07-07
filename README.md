@@ -24,9 +24,10 @@
 We split the dataset by `train:test:valid = 8:1:1`. And the current result comparing to the baseline offered by TA:
 
 
-|           | macro_f1  | micro_f1  |  roc_auc  |
-|  ------   |   ------  |  ------   |  ------   |
-| baseline  |  57.18%   | 73.37%    |  93.82%   |
-| my        |  69.23%   | 72.21%    |  94.23%   |
+|               | macro_f1  | micro_f1  |  roc_auc  |
+|  ------       |   ------  |  ------   |  ------   |
+| baseline      |  57.18%   | 73.37%    |  93.82%   |
+| my            |  69.23%   | 72.21%    |  94.23%   |
+| **final result**  |  **74.22%**   | **79.89%**    |  **96.19%**   |
 
 

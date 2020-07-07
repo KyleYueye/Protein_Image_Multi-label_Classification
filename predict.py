@@ -1,14 +1,15 @@
-import cv2
-import numpy as np
 import os
 import random
+from time import time
+
+import cv2
+import numpy as np
 import torch
 import torchvision.transforms as transforms
 from imutils import paths
 from sklearn.metrics import roc_auc_score, f1_score
 from sklearn.preprocessing import MultiLabelBinarizer
 from tensorflow.keras.preprocessing.image import img_to_array
-from time import time
 from tqdm import tqdm
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
@@ -122,15 +123,40 @@ class Predict:
         print('micro_f1 = {:.2f}%'.format(micro_f1 * 100))
         print('roc_auc = {:.2f}%'.format(roc_auc * 100))
 
+    def predict_on_test(self, root_path):
+        print("[INFO] reading and predicting images...")
+        tik = time()
+        output = []
+        dir_list = os.listdir(root_path)
+        for dir in tqdm(dir_list):
+            store = []
+            img_list = os.listdir(os.path.join(root_path, dir))
+            for img in img_list:
+                image = image_loader(os.path.join(root_path, dir, img), self.size)
+                image = image.to(self.device)
+
+                with torch.no_grad():
+                    tensor = self.model(image)
+                proba = list(tensor.cpu().numpy()[0])
+                store.append([img, proba, np.round(proba)])
+            output.append([dir, store])
+        tok = time()
+        dur = (tok - tik)
+        print("{:.1f}s in loading images".format(dur))
+        np.save('/home/jinHM/liziyi/Protein/dataset/final_test.npy', output)
+        print("[INFO]: Done")
+
 
 if __name__ == '__main__':
     resnet_50_path = '/home/jinHM/liziyi/Protein/Torch_Train/models/0624_1/resnet50_0624_1_model_15.pt'
     resnet_50_path_30epochs = '/home/jinHM/liziyi/Protein/Torch_Train/models/0624_2/resnet50_0624_2_model_24.pt'
     pred = Predict(resnet_50_path_30epochs, (224, 224))
 
+    pred.predict_on_test('/home/jinHM/liziyi/Protein/dataset/final_test')
+
     # pred.overall_eval()
 
-    for i in range(30):
-        pred.random_predict()
+    # for i in range(30):
+    #     pred.random_predict()
 
     # pred.specific_predict('964_E9_1_blue_red_green.jpg_19.jpg')

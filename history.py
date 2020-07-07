@@ -54,9 +54,48 @@ class DrawHistory:
                    ncol=2, mode="expand", borderaxespad=0.)
         plt.savefig(plot)
 
+    def save(self):
+        with open('/home/jinHM/liziyi/Protein/Torch_Train/save.csv', 'w') as f:
+            f.write('metrics,')
+            f.write(','.join([str(x + 1) for x in range(30)]))
+            f.write('\n')
+
+            f.write('train_loss,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.train_loss]))
+            f.write('\n')
+
+            f.write('valid_loss,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.valid_loss]))
+            f.write('\n')
+
+            f.write('train_auc,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.train_auc]))
+            f.write('\n')
+
+            f.write('valid_auc,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.valid_auc]))
+            f.write('\n')
+
+            f.write('train_macro_f1,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.train_macro_f1]))
+            f.write('\n')
+
+            f.write('valid_macro_f1,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.valid_macro_f1]))
+            f.write('\n')
+
+            f.write('train_micro_f1,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.train_micro_f1]))
+            f.write('\n')
+
+            f.write('valid_micro_f1,')
+            f.write(','.join(['{:.4f}'.format(x) for x in self.valid_micro_f1]))
+            f.write('\n')
+
 
 if __name__ == '__main__':
     history_path = '/home/jinHM/liziyi/Protein/Torch_Train/history/resnet50_0624_2_history.pt'
     draw = DrawHistory(history_path)
-    draw.using_matplotlib('/home/jinHM/liziyi/Protein/Torch_Train/resnet50_0624_2_history.png')
-    draw.using_tensorboard('/home/jinHM/liziyi/Protein/Torch_Train/history')
+    # draw.using_matplotlib('/home/jinHM/liziyi/Protein/Torch_Train/resnet50_0624_2_history.png')
+    # draw.using_tensorboard('/home/jinHM/liziyi/Protein/Torch_Train/history')
+    draw.save()
